@@ -3,9 +3,13 @@ import os
 import glob
 
 # Paths are relative to this script
-HEADER_TEMPLATE = "_header.html"
-FOOTER_TEMPLATE = "_footer.html"
-FILES = ["../index.html", "../pages/*.html"]
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+HEADER_TEMPLATE = os.path.join(BASE_DIR, "_header.html")
+FOOTER_TEMPLATE = os.path.join(BASE_DIR, "_footer.html")
+FILES = [
+    os.path.join(BASE_DIR, "..", "index.html"),
+    os.path.join(BASE_DIR, "..", "pages", "*.html")
+]
 
 def update_template():
     with open(HEADER_TEMPLATE, 'r', encoding='utf-8') as f:
@@ -40,13 +44,13 @@ def update_template():
             # Inject content
             modified_content = (
                 parts[0] +
-                "<header>" + 
+                "<header>\n" + 
                 header_template +
-                "</header>" + 
+                "\n</header>" + 
                 parts[2] +
-                "<footer>" + 
+                "<footer>\n" + 
                 footer_template +
-                "</footer>" + 
+                "\n</footer>" + 
                 parts[4] 
             )
             with open(filepath, 'w', encoding='utf-8') as f:
