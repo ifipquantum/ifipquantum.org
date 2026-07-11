@@ -129,6 +129,75 @@ footer {
 .card { background-color: rgba(196, 181, 253, 0.06); padding: 2rem; transition: transform 0.3s ease, background-color 0.3s ease;}
 .card:hover { border-color: var(--color-quantum-purple); }
 
+.people-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.person-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1.25rem;
+    background-color: rgba(196, 181, 253, 0.06);
+    border: 1px solid var(--color-quantum-purple-dark);
+    border-radius: 12px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.person-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-quantum-purple);
+    box-shadow: 0 10px 25px rgba(167, 139, 250, 0.2);
+}
+
+.person-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--color-quantum-purple-dark);
+    margin-bottom: 1.25rem;
+    transition: border-color 0.3s ease;
+}
+
+.person-card:hover .person-photo {
+    border-color: var(--color-quantum-purple);
+}
+
+.person-name {
+    font-size: 1.15rem;
+    margin-bottom: 0.25rem;
+}
+
+.person-role {
+    display: inline-block;
+    padding: 0.15rem 0.75rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--color-quantum-purple);
+    color: var(--color-charcoal);
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.person-affiliation {
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+    color: var(--color-quantum-purple-light);
+}
+
+.person-country {
+    margin-bottom: 0;
+    font-size: 0.85rem;
+    color: var(--color-mid-gray);
+}
+
 @media (max-width: 768px) {
     h1 { font-size: 2rem; }
     header { padding: 1rem 4%; }
