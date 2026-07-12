@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400..700;1,400..700&family=Manrope:wght@400..700&display=swap');
+
 :root {
     --color-charcoal: #130D2B;
     --color-crisp-white: #F6F4FA;
@@ -5,8 +7,8 @@
     --color-quantum-purple: #A78BFA;
     --color-quantum-purple-light: #C4B5FD;
     --color-mid-gray: #7D75A3;
-    --font-body: 'Futura', 'Inter', sans-serif; 
-    --font-heading: 'Futura', 'Inter', sans-serif;
+    --font-body: 'Futura', 'Manrope', sans-serif;
+    --font-heading: 'Futura', 'Jost', sans-serif;
 }
 
 
@@ -125,7 +127,7 @@ footer {
     color: var(--color-mid-gray);
 }
 
-.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;}
+.card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 2rem;}
 .card { background-color: rgba(196, 181, 253, 0.06); padding: 2rem; transition: transform 0.3s ease, background-color 0.3s ease;}
 .card:hover { border-color: var(--color-quantum-purple); }
 
@@ -134,6 +136,12 @@ footer {
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 1.5rem;
     margin-top: 2.5rem;
+}
+
+a.person-card,
+a.person-card:hover {
+    color: inherit;
+    text-decoration: none;
 }
 
 .person-card {
@@ -204,5 +212,6 @@ footer {
     .nav-container { flex-direction: column; align-items: flex-start; }
     nav ul { margin-top: 1rem; padding-left: 0; }
     nav ul li { margin-left: 15px; }
+    .card-grid { grid-template-columns: 1fr; }
 }
 
