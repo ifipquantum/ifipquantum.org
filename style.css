@@ -206,6 +206,79 @@ a.person-card:hover {
     color: var(--color-mid-gray);
 }
 
+/* Updates timeline */
+.updates {
+    max-width: 820px;
+    margin-top: 2.5rem;
+}
+
+.update {
+    display: flex;
+    gap: 2.5rem;
+    padding: 2rem 0;
+    border-top: 1px solid var(--color-quantum-purple-dark);
+}
+
+.update:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.update time {
+    flex: 0 0 6.5rem;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    padding-left: 1rem;
+    border-left: 3px solid var(--color-quantum-purple);
+}
+
+.update time .day {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-quantum-purple);
+}
+
+.update time .month {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-quantum-purple-light);
+}
+
+.update time .year {
+    font-size: 0.85rem;
+    color: var(--color-mid-gray);
+    margin-top: 0.15rem;
+}
+
+/* Date range: e.g. a multi-day meeting. Add class="range" to <time>
+   and put the range in .day ("6–9") or .month ("Oct–Nov"). */
+.update time.range .day {
+    font-size: 2rem;
+    letter-spacing: -0.01em;
+}
+
+.update-body {
+    flex: 1;
+}
+
+.update-body h2 {
+    font-size: 1.35rem;
+    color: var(--color-crisp-white);
+    border: none;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.update-body p:last-child {
+    margin-bottom: 0;
+}
+
 @media (max-width: 768px) {
     h1 { font-size: 2rem; }
     header { padding: 1rem 4%; }
@@ -213,5 +286,10 @@ a.person-card:hover {
     nav ul { margin-top: 1rem; padding-left: 0; }
     nav ul li { margin-left: 15px; }
     .card-grid { grid-template-columns: 1fr; }
+    .update { flex-direction: column; gap: 1rem; }
+    .update time { flex-basis: auto; flex-direction: row; align-items: baseline; gap: 0.5rem; }
+    .update time .day { font-size: 1.75rem; }
+    .update time .month { font-size: 0.9rem; }
+    .update time .year { margin-top: 0; }
 }
 
