@@ -1,4 +1,4 @@
-This is the repo for the website of the IFIP WG 1.11/2.17 on Foundations of Quantum Computation, hosted at [ifipqc.org](https://ifipqc.org). WG members can update the website by pushing to the repo (if they have access) or sending a PR. The domain name registration is managed by [Aleks Kissinger](https://www.cs.ox.ac.uk/people/aleks.kissinger/).
+This is the repo for the website of the IFIP WG 1.11/2.17 on Foundations of Quantum Computation, hosted at [ifipquantum.org](https://ifipquantum.org). WG members can update the website by pushing to the repo (if they have access) or sending a PR. The domain name registration is managed by [Aleks Kissinger](https://www.cs.ox.ac.uk/people/aleks.kissinger/).
 
 This is a static webpage, with some simple templating based on a python script. To change the header or footer on all pages at once, edit `templates/_header.html` or `templates/_footer.html` and run the script `util/update_template.py`. This will overwrite the contents of the `<header>` and `<footer>` tags in all files.
 
