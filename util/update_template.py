@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 # update_template.py - a simple Python script for plain HTML templates
 #

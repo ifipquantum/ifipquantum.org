@@ -2,4 +2,6 @@ This is the repo for the website of the IFIP WG 1.11/2.17 on Foundations of Quan
 
 This is a static webpage, with some simple templating based on a python script. To change the header or footer on all pages at once, edit `templates/_header.html` or `templates/_footer.html` and run the script `util/update_template.py`. This will overwrite the contents of the `<header>` and `<footer>` tags in all files.
 
-To add new pages, simply add more HTML files in the `pages/` subdirectory. To put pages in new folders/subfolders, the `FILES` variable in `update_template.py` will need to be modified.
+To add new pages, simply add more HTML files in the `pages/` subdirectory. To put pages in new folders/subfolders, the `FILES` variable in `update_template.py` will need to be modified. Note the templating script only touches the `<header>` and `<footer>` tags, so the `<head>` of a new page should be copied from an existing one to pick up the stylesheet and the favicon links.
+
+The favicons (`favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, and the icons in `images/` referenced from `site.webmanifest`) are all generated from `images/ifipqc-logo.svg` by `util/make_favicons.py`, which needs Inkscape on the PATH. Re-run it if the logo changes.
